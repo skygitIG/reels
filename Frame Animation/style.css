@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    color: #5cdb95;
+    border: 2px solid #5cdb95;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+}
+
+.btn::before,
+.btn::after {
+    position: absolute;
+    background: #000;
+    z-index: -1;
+    transition: 1s;
+    content: "";
+}
+
+.btn::before {
+    height: 50px;
+    width: 130px;
+}
+
+.btn::after {
+    width: 150px;
+    height: 30px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn:hover::before {
+    width: 0px;
+    background: #000;
+}
+
+.btn:hover::after {
+    height: 0px;
+    background: #000;
+}
+
+.btn:hover {
+    background: #000;
+}
