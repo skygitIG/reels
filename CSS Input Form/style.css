@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+}
+
+.container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 800px;
+    border: 2px solid #5cdb95;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background-color: #000000;
+}
+
+input[type="text"]:focus {
+    border-color: #5cdb95;
+    box-shadow: 0 0 8px 0 #5cdb95;
+}
+
+.inputWithIcon input[type="text"] {
+    padding-left: 40px;
+    color: #5cdb95;
+}
+
+.inputWithIcon {
+    position: relative;
+}
+
+.inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    padding: 9px 8px;
+    color: #5cdb95;
+    transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus+i {
+    color: #5cdb95;
+}
+
+.inputWithIcon.inputIconBg i {
+    background: #5cdb95;
+    color: #333333;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus+i {
+    color: #000000;
+    background: #5cdb95;
+}
+
+.age {
+    color: #5cdb95;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #5cdb95;
+    border: 2px solid #5cdb95;
+    padding: 5px 25px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+
+input[type="submit"]:hover {
+    border-color: #5cdb95;
+    box-shadow: 0 0 8px 0 #5cdb95;
+    background-color: #5cdb95;
+    color: #000000;
+    font-weight: 600;
+}
