@@ -1,0 +1,77 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card1 {
+    background:
+        url('3.jpg') center no-repeat;
+}
+
+.card2 {
+    background:
+        url('6.jpg') center no-repeat;
+}
+
+.card3 {
+    background:
+        url('7.jpg') center no-repeat;
+}
+
+
+
+/* General styles end */
+
+.card {
+    margin: 0 15px;
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid #604e48;
+    transition:
+        translate 0.5s,
+        box-shadow 0.5s;
+}
+
+.card1:hover {
+    border: none;
+    translate: 0 -20px;
+    box-shadow:
+        5px 3px rgba(175, 172, 165, 255),
+        10px 6px rgba(148, 99, 85, 255),
+        15px 9px rgba(116, 51, 33, 255);
+}
+
+.card2:hover {
+    border: none;
+    translate: 0 -20px;
+    box-shadow:
+        5px 3px rgba(2, 159, 254, 255),
+        10px 6px rgba(0, 95, 201, 255),
+        15px 9px rgba(35, 40, 82, 255);
+}
+
+.card3:hover {
+    border: none;
+    translate: 0 -20px;
+    box-shadow:
+        5px 3px rgb(217 220 242 / 75%),
+        10px 6px rgb(44 217 255 / 50%),
+        15px 9px rgb(126 255 178 / 25%);
+}
