@@ -1,0 +1,28 @@
+
+html, body {
+  background: #000000;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+	height: 401px;
+	margin: 0 auto;
+  margin-top: -200px;
+	position: relative;
+	top: 50%;
+  width: 530px;
+}
+
+.then, .now {
+  position: absolute;
+}
+
+.then {
+	overflow: hidden;
+  z-index: 2;
+}
+
+
+
+
