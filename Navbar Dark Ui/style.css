@@ -1,0 +1,186 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+body {
+    transform: scale(1.2)
+}
+
+#content {
+    position: relative;
+    white-space: nowrap;
+    min-height: 33px;
+    width: 260px;
+    margin: 30px auto;
+    top: 100px;
+}
+
+#content a {
+    background-image: linear-gradient(#485258, #30383c);
+    width: 66px;
+    height: 38px;
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    padding-top: 9px;
+    outline-width: 0px;
+    z-index: 990;
+    color: #eceff1;
+    text-align: center;
+    line-height: 1.2;
+    display: block;
+}
+
+#content a:not(.active) {
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0px rgba(0, 0, 0, 0.2),
+        0 9px 16px 0 rgba(0, 0, 0, 0.3),
+        0 4px 3px 0 rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(0, 0, 0, .2);
+
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+
+#content a:not(.active):hover,
+#content a:not(.active):focus {
+    color: #5cdb95;
+    text-shadow: 0 0 2px rgba(255, 255, 255, .2);
+}
+
+#content a:not(.active):active {
+    color: #86c6ef !important;
+    background: #313335;
+    text-shadow: 0 0 21px #618398, 0 0 15px #618398, 0 0 2px #fff, 0 0 1px #000, 0 0 5px #618398;
+    color: #86c6ef;
+}
+
+#content a.active,
+#content a:active {
+    box-shadow:
+        0 9px 16px 0 rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, .6),
+        0 2px 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 0 4px 3px rgba(0, 0, 0, 0.2),
+        inset 0 0 10px rgba(0, 0, 0, .5);
+    background: #313335;
+    text-shadow: 0 0 5px #618398, 0 0 21px #618398, 0 0 15px #618398, 0 0 2px #fff, 0 0 1px #000, 0 0 5px #618398, 0 -1px 0 #fff, 0 1px 0 #000;
+    color: #86c6ef;
+}
+
+#content a.active:before,
+#content a:active:before {
+    position: absolute;
+    background: linear-gradient(to bottom, #485258 0%, #485258 15%, #86c6ef 50%, #86c6ef 50%, #86c6ef 51%, #30383c 85%, #30383c 100%);
+    /* W3C */
+    display: block;
+    content: "";
+    width: 1px;
+    height: 36px;
+    top: 1px;
+    left: -2px;
+    box-shadow: 0px 0 0px rgba(134, 199, 239, .2), 0px 0 1px rgba(255, 255, 255, .2), 0px 0 5px rgba(255, 255, 255, .4);
+}
+
+#content a.active:after,
+#content a:active:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 36px;
+    top: 1px;
+    right: -2px;
+    background: linear-gradient(to bottom, #485258 0%, #485258 15%, #86c6ef 50%, #86c6ef 50%, #86c6ef 51%, #30383c 85%, #30383c 100%);
+    /* W3C */
+    box-shadow: 0px 0 0px rgba(134, 199, 239, .2), 0px 0 1px rgba(255, 255, 255, .2), 0px 0 5px rgba(255, 255, 255, .4);
+}
+
+#content a:last-child:active:after {
+    box-shadow: 0 0 0;
+    background: transparent
+}
+
+#content a:first-child:active:before {
+    box-shadow: 0 0 0;
+    background: transparent
+}
+
+#content a.active {
+    z-index: 1000
+}
+
+#content a:active {
+    z-index: 999
+}
+
+#content a:last-of-type {
+    -webkit-border-radius: 0 7px 7px 0;
+    -moz-border-radius: 0 7px 7px 0;
+    -ms-border-radius: 0 7px 7px 0;
+    -o-border-radius: 0 7px 7px 0;
+    border-radius: 0 7px 7px 0;
+}
+
+#content a:first-of-type {
+    -webkit-border-radius: 7px 0 0 7px;
+    -moz-border-radius: 7px 0 0 7px;
+    -ms-border-radius: 7px 0 0 7px;
+    -o-border-radius: 7px 0 0 7px;
+    border-radius: 7px 0 0 7px;
+    left: 0;
+}
+
+#content a:nth-of-type(2) {
+    left: 67px
+}
+
+#content a:nth-of-type(3) {
+    left: 134px
+}
+
+#content a:nth-of-type(4) {
+    left: 200px
+}
+
+#content a:nth-of-type(5) {
+    left: 267px
+}
+
+#content a:nth-of-type(6) {
+    left: 255px
+}
+
+#content a:nth-of-type(7) {
+    left: 306px
+}
+
+#content a:nth-of-type(8) {
+    left: 357px
+}
+
+#content a i:before {
+    margin-left: 2px;
+    font-size: 22px;
+}
+
+a span svg {
+    width: 18px;
+    stroke-width: 1.5;
+    margin-top: -2px;
+}
