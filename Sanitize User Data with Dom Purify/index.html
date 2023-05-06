@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SKY.GIT - Sanitize User Data with Dom Purify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="profile-desc">
+      <h1>Tell us about yourself</h1>
+    </div>
+    
+    <form class="profile-form">
+      <label><p>First Name</p>
+        <input required type="text" id="nameField"/>
+      </label>
+      <label><p>Bio</p>
+        <textarea required type="text" id="bioField"></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <div class="profile inactive">
+    </div>
+  </container>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.1/purify.min.js"></script>
+  <script  src="script.js"></script>
+
+</body>
+</html>
