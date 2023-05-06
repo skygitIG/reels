@@ -1,0 +1,61 @@
+/* ======================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #000000;
+    display: grid;
+    place-content: center;
+}
+
+/* ======================== */
+.card {
+    width: 200px;
+    height: 250px;
+    perspective: 800px;
+}
+
+.card__inner {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+
+.card__body {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card__body--front {
+    background-image: radial-gradient(circle 248px at center,
+            #00ff73 0%, #5cdb95d2 47%,
+            #5cdb95 100%);
+}
+
+.card__body--back {
+    background-image: linear-gradient(60deg, rgb(58, 162, 180) 14%, rgba(255, 41, 232, 0.7931547619047619) 57%, rgba(252, 69, 79, 0.896796218487395) 89%);
+    transform: rotateY(180deg);
+}
