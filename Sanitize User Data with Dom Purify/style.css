@@ -1,0 +1,107 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  color: aliceblue;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 0%);
+}
+
+.profile-desc {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-desc h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.profile-desc p {
+  max-width: 400px;
+  margin: 1.4rem auto 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.profile-desc, .profile, .profile-form {
+  padding: 2rem;
+}
+
+.profile, .profile-form {
+  border-radius: 10px;
+  background: hsl(0, 0%, 0%);
+  display: grid;
+  grid-gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  border-top: 2px solid hsl(180, 17.6%, 93.3%, .8);
+  border-left: 1px solid hsl(180, 17.6%, 93.3%, .8);
+  border-bottom: 2px solid hsl(180, 3.8%, 73.9%, .5);
+  border-right: 2px solid hsl(180, 3.8%, 73.9%, .5);
+}
+
+.profile.inactive, .profile-form.inactive {
+  display: none;
+}
+
+input, label, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+  border: inherit;
+  width: 100%;
+  border: none;
+}
+
+label p {
+  position: relative;
+  z-index: 2;
+  margin-bottom: .3rem;
+  letter-spacing: 1px;
+}
+
+input, textarea {
+  padding: .5rem;
+  border-radius: 4px;
+  background: hsl(180, 17.6%, 93.3%, 1);
+  transition: all 250ms ease-in-out;
+  border: 2px solid transparent;
+  color: #000000;
+}
+
+input:focus, textarea:focus, button:is(:hover, :focus){
+  box-shadow: none;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-bottom: 2px solid hsl(103, 25.7%, 13.7%, 1);
+}
+
+button {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  width: max-content;
+  padding: .6rem 2rem;
+  border-radius: 4px;
+  color: hsl(180, 17.6%, 93.3%, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8rem;
+  background: hsl(300, 2.9%, 6.9%, 1);
+  transition: all 250ms ease-in-out;
+}
+button:hover{
+  background-color: #5cdb95;
+  color: #000000;
+}
