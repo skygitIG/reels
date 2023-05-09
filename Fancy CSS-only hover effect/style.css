@@ -1,0 +1,51 @@
+@property --d {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+@property --r {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+img {
+  --n: 5;
+  /* number of squares */
+
+  --_g: #0000 var(--d, 0%), #000 0;
+  -webkit-mask:
+    linear-gradient(calc(0deg + var(--r, 0deg)), var(--_g)),
+    linear-gradient(calc(90deg + var(--r, 0deg)), var(--_g)),
+    linear-gradient(calc(-90deg + var(--r, 0deg)), var(--_g)),
+    linear-gradient(calc(180deg + var(--r, 0deg)), var(--_g));
+  -webkit-mask-size: calc(100%/var(--n)) calc(100%/var(--n));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intesect;
+  outline: 100vmax solid #0009;
+  outline-offset: -100vmax;
+  transition: outline-color .5s;
+  cursor: pointer;
+}
+
+img:hover {
+  --d: 0.1%;
+  --r: 90deg;
+  outline-color: #0000;
+  transition: outline-color .3s .2s, --d .5s cubic-bezier(0, 450, 1, 450), --r .5s linear;
+  /* 333 is the "reference value", the bigger you use (I used 450) the bigger the gap between square is
+     It's not a magic number (333 = 25/(.1*.75) )
+     more detail: https://css-tricks.com/advanced-css-animation-using-cubic-bezier/
+  */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  gap: 40px;
+  background: rgb(0, 0, 0);
+}
