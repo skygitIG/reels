@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+
+
+
+dt {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: inline-block;
+  font-weight: bold;
+  background: #000000;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #c2cccf;
+  font-family: 'Ysabeau', sans-serif;
+}
+
+dl {
+  background: #455a64;
+  width: fit-content;
+  padding: 1rem;
+  max-height: 300px;
+  overflow: auto;
+  border-radius: 10px;
+  font-family: 'Ysabeau', sans-serif;
+  font-size: 1.2rem;
+}
+
+dd {
+  margin-inline-start: 3.2rem;
+  margin-block-end: 0.5rem;
+}
+
+body {
+  background: #000000;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+  border-radius: 9px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
