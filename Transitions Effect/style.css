@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+
+body {
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #5cdb95;
+  font-size: 1.3rem;
+}
+
+body h1 {
+  text-align: center;
+  text-shadow: 0 4px #5a5a5a;
+  font-size: 95px;
+  font-weight: bold;
+  font-family: 'Ysabeau', sans-serif;
+}
+
+body .properties {
+  font-family: 'Ysabeau', sans-serif;
+  padding: 25px 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+}
+
+body .container {
+  display: flex;
+  width: 550px;
+  margin: auto;
+}
+
+body .box {
+  font-size: 25px;
+  width: 25%;
+  height: 90px;
+  margin: 0 15px;
+}
+
+body .box p {
+  padding: 10px;
+}
+
+body .box:nth-of-type(1) {
+  background-color: #000000;
+  border: 5px solid #5cdb95;
+}
+
+body .box:nth-of-type(1):hover {
+  background-color: #5cdb95;
+  transform: scale(1.2) rotate(45deg);
+  transition-duration: 1s;
+  border-radius: 15px;
+  color: #000000;
+}
+
+body .box:nth-of-type(2) {
+  background-color: #000000;
+  border: 5px solid #5cdb95;
+}
+
+body .box:nth-of-type(2):hover {
+  border: 5px solid #5cdb95;
+  transition-duration: 0.5s;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+body .box:nth-of-type(3) {
+  background-color: #000;
+  border: 5px solid #5cdb95;
+  opacity: 0.8;
+}
+
+body .box:nth-of-type(3):hover {
+  text-align: center;
+  transform: scale(1.2) translatey(-30px);
+  border-radius: 50px;
+  opacity: 1;
+  transition-duration: 2s, 1s;
+  transition-property: transform, border-radius;
+  transition-timing-function: ease-in;
+}
+
+body .box:nth-of-type(5) {
+  background-color: #000;
+  border: 5px solid #5cdb95;
+  opacity: 0.8;
+}
+
+body .box:nth-of-type(5):hover {
+  text-align: center;
+  transform: scale(1.2) translatey(-30px);
+  opacity: 1;
+  transition-duration: 2s, 1s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
+body .box:nth-of-type(4) {
+  border: 5px solid #5cdb95;
+}
+
+body .box:nth-of-type(4):hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: transform 0.4s 1s linear, opacity 0.2s 1s ease-in;
+}
