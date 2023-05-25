@@ -1,0 +1,63 @@
+.of--none {
+  object-fit: none;
+  /*don't need this code*/
+}
+
+.of--contain {
+  object-fit: contain;
+}
+
+.of--cover {
+  object-fit: cover;
+}
+
+.op--l {
+  object-position: left;
+}
+
+.op--80 {
+  object-position: 80%;
+}
+
+.op--br {
+  object-position: bottom right;
+}
+
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: 'Poppins', sans-serif;
+  color: #ddd;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  padding: 36px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.item {
+  width: 30%;
+}
+
+.imageContainer {
+  aspect-ratio: 1/1;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
