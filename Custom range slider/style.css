@@ -1,0 +1,76 @@
+input {
+  --c: orange;
+  /* active color */
+  --g: 8px;
+  /* the gap */
+  --l: 5px;
+  /* line thickness*/
+  --s: 30px;
+  /* thumb size*/
+
+  width: 400px;
+  height: var(--s);
+  /* needed for Firefox*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb {
+  height: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--l) inset var(--c);
+  border-image: linear-gradient(90deg, var(--c) 50%, #ababab 0) 1/0 100vw/0 calc(100vw + var(--g));
+  clip-path:
+    polygon(0 calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+      0 calc(50% - var(--l)/2),
+      0 0, 100% 0,
+      100% calc(50% - var(--l)/2),
+      100vw calc(50% - var(--l)/2),
+      100vw calc(50% + var(--l)/2),
+      100% calc(50% + var(--l)/2),
+      100% 100%, 0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--s);
+  width: var(--s);
+  background: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--l) inset var(--c);
+  border-image: linear-gradient(90deg, var(--c) 50%, #ababab 0) 1/0 100vw/0 calc(100vw + var(--g));
+  clip-path:
+    polygon(0 calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+      0 calc(50% - var(--l)/2),
+      0 0, 100% 0,
+      100% calc(50% - var(--l)/2),
+      100vw calc(50% - var(--l)/2),
+      100vw calc(50% + var(--l)/2),
+      100% calc(50% + var(--l)/2),
+      100% 100%, 0 100%);
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+/**/
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  gap: 40px;
+  place-content: center;
+  background: repeating-linear-gradient(-45deg, #fff 0 20px, #f9f9f9 0 40px)
+}
