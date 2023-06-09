@@ -1,0 +1,225 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+body h1,
+body p,
+body button,
+body a {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  background-color: #000000;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+#app #cards-wrapper {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+}
+
+#app #cards-wrapper #cards {
+  height: 500px;
+  position: relative;
+  width: 1000px;
+}
+
+#app #cards-wrapper #cards .card-wrapper {
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  transition: all 0.25s;
+  width: 280px;
+}
+
+#app #cards-wrapper #cards .card-wrapper:not(.selected):hover {
+  cursor: pointer;
+}
+
+#app #cards-wrapper #cards .card-wrapper:not(.selected):hover .card {
+  top: calc(50% - 50px);
+}
+
+#app #cards-wrapper #cards .card-wrapper:not(.selected):hover .card .icon i {
+  color: #000000;
+}
+
+#app #cards-wrapper #cards .card-wrapper:first-child {
+  top: calc(50% + 50px);
+  transform: translateY(-50%) rotate(-10deg);
+}
+
+#app #cards-wrapper #cards .card-wrapper:nth-child(2) {
+  top: calc(50% + 20px);
+  transform: translateY(-50%) rotate(-5deg);
+}
+
+#app #cards-wrapper #cards .card-wrapper:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+#app #cards-wrapper #cards .card-wrapper:nth-child(4) {
+  top: calc(50% + 20px);
+  transform: translateY(-50%) rotate(5deg);
+}
+
+#app #cards-wrapper #cards .card-wrapper:nth-child(5) {
+  top: calc(50% + 50px);
+  transform: translateY(-50%) rotate(10deg);
+}
+
+#app #cards-wrapper #cards .card-wrapper.selected {
+  height: 600px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 560px;
+}
+
+#app #cards-wrapper #cards .card-wrapper.selected .card {
+  height: 600px;
+  width: 500px;
+}
+
+#app #cards-wrapper #cards .card-wrapper.selected .card .icon {
+  top: 20px;
+  transform: translate(-50%, 0px);
+}
+
+#app #cards-wrapper #cards .card-wrapper.selected .card .icon i {
+  color: #5cdb95;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 0px 24px 6px rgba(0, 0, 0, 0.08);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s;
+  width: 280px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.25s;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .icon i {
+  color: #b4b4b4;
+  font-size: 6em;
+  height: 150px;
+  line-height: 150px;
+  width: 150px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content {
+  animation: fadeIn 1s;
+  margin-top: 170px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .title h1 {
+  color: #000000;
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .text {
+  margin-top: 100px;
+  padding: 20px 40px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .text p {
+  color: #787878;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button {
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  bottom: 20px;
+  box-shadow: 0px 0px 24px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  height: 50px;
+  left: 50%;
+  outline: none;
+  padding: 0px;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.25s;
+  width: 50px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button:hover,
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button:focus {
+  bottom: 25px;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button:hover i,
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button:focus i {
+  color: #a8ff78;
+}
+
+#app #cards-wrapper #cards .card-wrapper .card .content .close-button i {
+  color: #787878;
+  font-size: 1.5em;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+#app #youtube-link {
+  bottom: 0px;
+  color: #5a5a5a;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 20px;
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  #app #cards-wrapper {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+@media (max-width: 800px) {
+  #app #cards-wrapper {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
