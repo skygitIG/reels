@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  --card-width: 300px;
+  --card-height: 400px;
+  position: relative;
+  min-width: var(--card-width);
+  min-height: var(--card-height);
+  margin: 1rem 2rem;
+  display: grid;
+  background-size: cover;
+  box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.024), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 30.1px 24.1px rgba(0, 0, 0, 0.046), 0 100px 80px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  transition: opacity 250ms ease;
+}
+
+.card--1 {
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url("https://source.unsplash.com/4rDCa5hBlCs");
+}
+
+.card--1 .tile {
+  background-image: url("https://source.unsplash.com/4rDCa5hBlCs");
+  background-size: 200%;
+  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+}
+
+.card--1 .tile:nth-child(1) {
+  background-position: 50% 29.5%;
+}
+
+.card--1 .tile:nth-child(2) {
+  background-position: 50% 58%;
+}
+
+.card--1:hover .tile {
+  clip-path: polygon(0 0, 0 100%, 101% 100%, 101% 0);
+}
+
+.card--1 .text-container p,
+.card--1 .text-container a {
+  transform: translateY(var(--y-offset));
+}
+
+.card--1 .text-container h1 .char::before {
+  --color: rgb(90, 255, 68);
+  transform: translateY(var(--y-offset));
+}
+
+.card--2 {
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("https://source.unsplash.com/nawbGwt_12U");
+}
+
+.card--2 .tile {
+  background-image: url("https://source.unsplash.com/nawbGwt_12U");
+  background-size: 300%;
+  clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+}
+
+.card--2 .tile:nth-child(1) {
+  background-position: 20% 40%;
+}
+
+.card--2 .tile:nth-child(2) {
+  background-position: 70% 40%;
+}
+
+.card--2:hover .tile {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+}
+
+.card--2 .text-container p,
+.card--2 .text-container a {
+  transform: translateX(calc(var(--y-offset) * 0.2));
+}
+
+.card--2 .text-container h1 .char::before {
+  --color: rgb(55, 135, 255);
+  transform-origin: right bottom;
+  transform: translateX(var(--y-offset)) rotate(10deg);
+}
+
+.card .tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: clip-path 350ms cubic-bezier(0.75, 0.85, 0.25, 1);
+  transition-delay: calc(200ms + (var(--index) * 200ms));
+  filter: grayscale(0.5);
+}
+
+.card .tile:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.card .text-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 10;
+  padding: 1.2rem 1.5rem;
+}
+
+.card .text-container p,
+.card .text-container a {
+  font-family: "Montserrat";
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: transform 350ms ease, opacity 350ms ease;
+  transition-delay: var(--delay);
+}
+
+.card .text-container h1,
+.card .text-container p {
+  margin-bottom: 0.4rem;
+}
+
+.card .text-container h1 {
+  --delay: 150ms;
+  font-family: Roboto;
+  font-size: 2rem;
+  background: none;
+}
+
+.card .text-container h1 .char {
+  color: transparent;
+}
+
+.card .text-container h1 .char::before {
+  --y-offset: 30%;
+  position: absolute;
+  content: attr(data-char);
+  visibility: visible;
+  color: var(--color, #fff);
+  opacity: 0;
+  transition: transform 350ms ease, opacity 350ms ease;
+  transition-delay: var(--delay);
+}
+
+.card .text-container p {
+  --y-offset: 25%;
+  --delay: 50ms;
+  color: #bebebe;
+}
+
+.card .text-container a {
+  --y-offset: 100%;
+  --delay: 0ms;
+  text-decoration: none;
+  color: #a0a0a0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.card .text-container a:hover {
+  color: #fff;
+}
+
+.card:hover::after {
+  opacity: 1;
+  transition-delay: 850ms;
+}
+
+.card:hover .text-container h1,
+.card:hover .text-container p,
+.card:hover .text-container a {
+  opacity: 1;
+  transform: translateY(0%) translateX(0%);
+  transition-delay: var(--delay);
+}
+
+.card:hover .text-container h1 {
+  --delay: 850ms;
+}
+
+.card:hover .text-container h1 .char::before {
+  opacity: 1;
+  transition-delay: calc(var(--delay) + var(--char-index) * 20ms);
+  transform: translateY(0%);
+}
+
+.card:hover .text-container p {
+  --delay: 950ms;
+}
+
+.card:hover .text-container a {
+  --delay: 1050ms;
+}
+
+@media only screen and (max-width: 680px) {
+  body {
+    height: 100%;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+}
